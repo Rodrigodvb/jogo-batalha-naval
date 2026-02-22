@@ -1,0 +1,74 @@
+/* Define estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Estilo do tabuleiro */
+.boards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+#player1-board, #player2-board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 3px;
+}
+
+/* Cada quadrado do tabuleiro */
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #4a90e2;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.cell:hover {
+    transform: scale(1.1);
+}
+
+/* Quando o jogador errar */
+.miss {
+    background-color: rgb(10, 51, 161);
+}
+.miss::after {
+    content: "🌊";
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Quando o jogador acertar */
+.hit {
+    background-color: red;
+}
+.hit::after {
+    content: "💥";
+    position: absolute;
+    font-size: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: orange;
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Batalha Naval</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🚢 Batalha Naval</h1>
+    <div class="container">
+        <!-- Área onde o tabuleiro será criado -->
+        <div class="boards">
+            <div>
+                <h2>Jogador 1</h2>
+                <div id="player1-board"></div>
+            </div>
+            <div>
+                <h2>Jogador 2</h2>
+                <div id="player2-board"></div>
+            </div>
+        </div>
+
+        <!-- Área para mostrar mensagens do jogo -->
+        <p id="message">Clique em um quadrado para atacar!</p>
+        <button id="restart">Reiniciar Jogo</button>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
